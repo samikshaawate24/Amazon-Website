@@ -42,6 +42,31 @@ const products = [{
         count:37
     },
     priceCents:2067
+},{
+    image: 'images/products/plain-hooded-fleece-sweatshirt-yellow.jpg',
+    name :'Plain Hooded Fleece Sweatshirt',
+    rating :{
+        stars:4.5,
+        count:317
+    },
+    priceCents:2400
+},
+{
+    image: 'images/products/cotton-bath-towels-teal.webp',
+    name :'100% Cotton Bath Towels - 2 Pack, Light Teal',
+    rating :{
+        stars:4.5,
+        count:93
+    },
+    priceCents:2110
+},{
+   image: 'images/products/men-navigator-sunglasses-brown.jpg',
+    name :"Men's Navigator Sunglasses Pilot",
+    rating :{
+        stars:3.5,
+        count:42
+    },
+    priceCents:1690
 }];
 
 let productHTML ='';
@@ -59,7 +84,7 @@ products.forEach((product) =>{
 
           <div class="product-rating-container">
             <img class="product-rating-stars"
-              src="${product.rating.stars * 10}.png">
+              src="rating-${product.rating.stars * 10}.png">
             <div class="product-rating-count link-primary">
               ${product.rating.count}
             </div>
