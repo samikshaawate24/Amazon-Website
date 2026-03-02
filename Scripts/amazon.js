@@ -1,4 +1,4 @@
-
+import {cart} from '../data/cart.js';
 let productHTML ='';
 products.forEach((product) =>{
     productHTML = productHTML + `
@@ -86,8 +86,7 @@ button.addEventListener('click', () =>{
   });
   document.querySelector('.js-cart-quantity')
   .innerHTML =cartQuantity;
-  console.log(cartQuantity);
-console.log(cart);
+ 
 
 });
 });
