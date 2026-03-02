@@ -72,13 +72,21 @@ button.addEventListener('click', () =>{
   });
 
   if(matchingItem){
-    matchingItem.quality += 1;
+    matchingItem.quantity += 1;
   }else{
     cart.push({
     productId:productId,
-    quality :1
+    quantity :1
   });
   }
+
+  let cartQuantity = 0;
+  cart.forEach((item) => {
+    cartQuantity +=item.quantity;
+  });
+  document.querySelector('.js-cart-quantity')
+  .innerHTML =cartQuantity;
+  console.log(cartQuantity);
 console.log(cart);
 
 });
